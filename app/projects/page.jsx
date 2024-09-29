@@ -27,7 +27,7 @@ const aproject = [
     stack: [{ name: "Html 5" }, { name: "Css 3" }],
     image: "/assets2/work/Spotify.png",
     live: "https://lowkeyhuzaifa.github.io/Spotify-Clone",
-    github: "https://github.com/lowkeyhuzaifa/Spotify-Clone",
+    github: "https://github.com/huzaifa1097/Spotify-Clone",
   },
   {
     num: "02",
@@ -45,8 +45,8 @@ const aproject = [
          {name:"Tailwind CSS"},
           {name:"Vite"}],
     image: "/assets2/work/stubnb.png",
-    live: "https://stubnb.netlify.app/",
-    github: "https://github.com/lowkeyhuzaifa/Stubnb",
+    live: "https://stubnb.netlify.app",
+    github: "https://github.com/huzaifa1097/Stubnb",
   },
   
   
