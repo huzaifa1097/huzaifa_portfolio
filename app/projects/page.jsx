@@ -19,17 +19,31 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 const aproject = [
   {
-    num: "01",
-    category: "frontend",
-    title: "Spotify Clone",
+    num:"01",
+    category :"backend",
+    title :" Uber-Style Ride Booking Backend",
     description:
-      "This clone is an exciting and engaging project built using HTML and CSS that replicates the user interface and design of the popular music streaming platform, Spotify. With a keen focus on user experience and aesthetics, This Clone aims to provide a seamless and visually appealing music streaming experience for both music enthusiasts and web developers looking to hone their front-end development skills.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }],
-    image: "/assets2/work/Spotify.png",
-    live: "https://lowkeyhuzaifa.github.io/Spotify-Clone",
-    github: "https://github.com/huzaifa1097/Spotify-Clone",
-  },
-  {
+    "Built a RESTful backend API using Java Spring Boot, simulating Uber’s ride-booking system with role-based access (Rider, Driver, Admin), JWT authentication, and PostgreSQL + PostGIS for spatial queries. Implemented booking, cancellation, driver assignment, and ride status update workflows. Deployed the project on AWS Elastic Beanstalk and tested all endpoints via Postman.",
+    stack:[
+  { name: "Java" },
+  { name: "Spring Boot" },
+  { name: "Spring Security" },
+  { name: "Spring Data JPA" },
+  { name: "PostgreSQL" },
+  { name: "PostGIS" },
+  { name: "JWT" },
+  { name: "Maven" },
+  { name: "Postman" },
+  { name: "Swagger UI" },
+  { name: "REST API" },
+  { name: "AWS Elastic Beanstalk" },
+  { name: "Git" },
+  { name: "GitHub" }],
+  image: "/assets2/work/uber.png",
+  live: "http://uber-spring-boot-env.eba-retfie2d.eu-north-1.elasticbeanstalk.com/swagger-ui/index.html",
+  github: "https://github.com/huzaifa1097/uber-spring-boot",
+ },
+   {
     num: "02",
     category: "Full Stack",
     title: "Stubnb",
@@ -48,6 +62,18 @@ const aproject = [
     live: "https://stubnb.netlify.app",
     github: "https://github.com/huzaifa1097/Stubnb",
   },
+  {
+    num: "03",
+    category: "frontend",
+    title: "Spotify Clone",
+    description:
+      "This clone is an exciting and engaging project built using HTML and CSS that replicates the user interface and design of the popular music streaming platform, Spotify. With a keen focus on user experience and aesthetics, This Clone aims to provide a seamless and visually appealing music streaming experience for both music enthusiasts and web developers looking to hone their front-end development skills.",
+    stack: [{ name: "Html 5" }, { name: "Css 3" }],
+    image: "/assets2/work/Spotify.png",
+    live: "https://lowkeyhuzaifa.github.io/Spotify-Clone",
+    github: "https://github.com/huzaifa1097/Spotify-Clone",
+  },
+ 
   
   
 ];

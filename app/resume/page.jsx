@@ -8,11 +8,12 @@ import {
   FaNodeJs,
   FaGit,
   FaGithub,
+  FaJava
 } from "react-icons/fa";
-import { SiExpress,SiMysql ,SiMongodb,SiTailwindcss, SiNextdotjs,  } from "react-icons/si";
+import { SiExpress,SiPostgresql ,SiMongodb,SiTailwindcss, SiNextdotjs, SiSpringboot, SiSpringsecurity,SiPostman,SiNetlify,SiVercel } from "react-icons/si";
  const about = {
   title:"About me",
-  description:"I’m a full-stack developer who brings innovation and functionality together to create standout web experiences. With a knack for problem-solving and a passion for technology, I turn your vision into a seamless, dynamic reality.",
+  description:"I’m a Full Stack Developer with freelance experience, skilled in the MERN stack and Java with Spring Boot. I bring together innovation and functionality to build seamless, scalable web applications. Driven by problem-solving and a passion for tech, I turn ideas into clean, real-world solutions. As a CSE 2025 graduate, I’m now looking to take this energy into a full-time software engineering role.",
   info:[
     {
       fieldName:"Name",
@@ -28,7 +29,7 @@ import { SiExpress,SiMysql ,SiMongodb,SiTailwindcss, SiNextdotjs,  } from "react
     },
     {
       fieldName:"Mail",
-      fieldValue:"thenameishuzaifa10@gmail.com",
+      fieldValue:"ahmadhuzaifa1097@gmail.com",
     },
     {
       fieldName:"Discord",
@@ -103,6 +104,23 @@ import { SiExpress,SiMysql ,SiMongodb,SiTailwindcss, SiNextdotjs,  } from "react
     description:"Along my journey, I’ve honed a versatile skill set. Here are some key abilities that drive my expertise:",
     skillList:[
       {
+        icon:<FaJava/>,
+        name: 'Java 21',
+      },
+         {
+        icon:<SiSpringboot/>,
+        name: 'SpringBoot',
+      },
+         {
+        icon:<SiSpringsecurity/>,
+        name: 'SpringSecurity',
+      },
+
+      {
+        icon:<SiPostgresql/>,
+        name: 'PostgreSql',
+      },
+      {
         icon:<FaHtml5/>,
         name: 'Hypertext Markup Language 5',
       },
@@ -118,6 +136,7 @@ import { SiExpress,SiMysql ,SiMongodb,SiTailwindcss, SiNextdotjs,  } from "react
         icon:<SiMongodb/>,
         name: 'MongoDb',
       },
+     
       {
         icon:<SiExpress/>,
         name: 'Express.js',
@@ -138,7 +157,6 @@ import { SiExpress,SiMysql ,SiMongodb,SiTailwindcss, SiNextdotjs,  } from "react
         icon:<SiTailwindcss/>,
         name: 'Tailwind',
       },
-
       {
         icon:<FaGit/>,
         name: 'git',
@@ -146,6 +164,18 @@ import { SiExpress,SiMysql ,SiMongodb,SiTailwindcss, SiNextdotjs,  } from "react
       {
         icon:<FaGithub/>,
         name: 'github',
+      },
+      {
+        icon:<SiPostman/>,
+        name: 'Postman',
+      },
+      {
+        icon:<SiNetlify/>,
+        name: 'Netlify',
+      },
+      {
+        icon:<SiVercel/>,
+        name: 'Vercel',
       },
     ],
 };

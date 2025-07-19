@@ -11,7 +11,7 @@ const Home = () => {
       <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
       {/**text */}
       <div className="text-center xl:text-left order-2 xl:order-none">
-        <span className="text-center xl:text-left">Aspiring Software Developer</span>
+        <span className="text-center xl:text-left">Aspiring Software Developer and Freelance Full Stack Developer</span>
         <h1 className="h1 mb-6">
           Hello I'm <br /> <span className="text-accent"> Abu Huzaifa Ahmad</span>
         </h1>
@@ -22,7 +22,7 @@ const Home = () => {
          </p>
          {/*button and socials */}
          <div className="flex flex-col xl:flex-row items-center gap-8">
-         <a href="/assets2/resume/abe huzaifa resume.pdf" download>
+         <a href="/assets2/resume/ahmadhuzaifa_resume.pdf" download>
          <Button 
            variant ="outline"
            className="uppercase flex items-center gap-2 px-3 py-1 text-sm">
