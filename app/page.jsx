@@ -11,18 +11,16 @@ const Home = () => {
       <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
       {/**text */}
       <div className="text-center xl:text-left order-2 xl:order-none">
-        <span className="text-center xl:text-left">Aspiring Software Developer and Freelance Full Stack Developer</span>
+        <span className="text-center xl:text-left">Full-Stack Developer (Python & React) | Specializing in AI-Powered Applications & Agentic Systems</span>
         <h1 className="h1 mb-6">
-          Hello I'm <br /> <span className="text-accent"> Abu Huzaifa Ahmad</span>
+          Hello I'm <br /> <span className="text-accent">Abu Huzaifa Ahmad</span>
         </h1>
         <p className="mac-w-[500px] mb-9 text-white/80">
-        I am a tech enthusisast with a passion for <br/> developing seamless,
-         user-friendly applications.<br/>
-         I am driven by a commitment to continuous<br/> learning and impactful problem-solving.
+        I am a versatile Full-Stack Developer with a passion for creating seamless, user-friendly applications. I specialize in integrating advanced AI capabilities into real-world solutions, with proven experience in building agentic systems using Python, LangChain, and React. My commitment to continuous learning and impactful problem-solving drives me to build robust, intelligent software.
          </p>
          {/*button and socials */}
          <div className="flex flex-col xl:flex-row items-center gap-8">
-         <a href="/assets2/resume/ahmadhuzaifa_resume.pdf" download>
+         <a href="/assets2/resume/resume_ahmadhuzaifa.pdf" download>
          <Button 
            variant ="outline"
            className="uppercase flex items-center gap-2 px-3 py-1 text-sm">

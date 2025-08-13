@@ -8,39 +8,41 @@ import {
   FaNodeJs,
   FaGit,
   FaGithub,
-  FaJava
+  FaJava,
+  FaPython,
+
 } from "react-icons/fa";
-import { SiExpress,SiPostgresql ,SiMongodb,SiTailwindcss, SiNextdotjs, SiSpringboot, SiSpringsecurity,SiPostman,SiNetlify,SiVercel } from "react-icons/si";
+import { SiExpress,SiPostgresql ,SiMongodb,SiTailwindcss, SiNextdotjs, SiSpringboot, SiSpringsecurity,SiPostman,SiNetlify,SiVercel, SiFastapi,SiTypescript,SiLangchain,SiFirebase,SiGooglecloud,SiDocker} from "react-icons/si";
  const about = {
   title:"About me",
-  description:"I’m a Full Stack Developer with freelance experience, skilled in the MERN stack and Java with Spring Boot. I bring together innovation and functionality to build seamless, scalable web applications. Driven by problem-solving and a passion for tech, I turn ideas into clean, real-world solutions. As a CSE 2025 graduate, I’m now looking to take this energy into a full-time software engineering role.",
+  description:"A versatile Full-Stack Developer specializing in the architecture and development of AI-powered applications. My flagship project, OmniLeap, is an end-to-end intelligent agent featuring RAG-based long-term memory and a code interpreter, built with Python, FastAPI, and React. With a strong foundation in both modern AI frameworks and traditional backend systems like Java and Spring Boot, I am adept at turning complex requirements into scalable, real-world solutions. As a recent CSE graduate, I am eager to contribute my skills to a forward-thinking team.",
   info:[
     {
-      fieldName:"Name",
+      fieldName:"Name:",
       fieldValue:"Abu Huzaifa Ahmad",
     },
     {
-      fieldName:"Phone",
+      fieldName:"Phone:",
       fieldValue:"(+91) 9415098983",
     },
     {
-      fieldName:"Experience",
+      fieldName:"Experience:",
       fieldValue:"Fresher",
     },
     {
-      fieldName:"Mail",
+      fieldName:"Mail:",
       fieldValue:"ahmadhuzaifa1097@gmail.com",
     },
     {
-      fieldName:"Discord",
+      fieldName:"Discord:",
       fieldValue:"lowkeyhuzaifa",
     },
     {
-      fieldName:"Nationality",
+      fieldName:"Nationality:",
       fieldValue:"Indian",
     },
     {
-      fieldName:"Languages",
+      fieldName:"Languages:",
       fieldValue:"English,Hindi"
     },
   ] 
@@ -79,12 +81,12 @@ import { SiExpress,SiPostgresql ,SiMongodb,SiTailwindcss, SiNextdotjs, SiSpringb
  const education = {
   icon: '/assets2/resume/cap.svg',
   title:'My Education',
-  description:"Throughout my journey, I’ve earned diverse educational qualifications. Here are some highlights of my academic achievements:",
+  description:"Throughout my journey, I’ve earned diverse educational qualifications. Here are some highlights of my academic achievements",
   items:[
     {
       institution:"Galgotia's University",
       degree:"Computer Science and Engineering",
-      duration:"2021-present",
+      duration:"2021-2025",
     },
     {
       institution:"Central Academy,Lucknow",
@@ -104,6 +106,11 @@ import { SiExpress,SiPostgresql ,SiMongodb,SiTailwindcss, SiNextdotjs, SiSpringb
     description:"Along my journey, I’ve honed a versatile skill set. Here are some key abilities that drive my expertise:",
     skillList:[
       {
+        icon:<FaPython/>,
+        name: 'Python 3.9',
+      },
+      
+      {
         icon:<FaJava/>,
         name: 'Java 21',
       },
@@ -111,14 +118,27 @@ import { SiExpress,SiPostgresql ,SiMongodb,SiTailwindcss, SiNextdotjs, SiSpringb
         icon:<SiSpringboot/>,
         name: 'SpringBoot',
       },
-         {
-        icon:<SiSpringsecurity/>,
-        name: 'SpringSecurity',
+      {
+        icon:<SiFastapi/>,
+        name: 'FastAPI',
       },
+      {
+        icon:<SiLangchain/>,
+        name: 'LangChain',
+      },
+      
+      //    {
+      //   icon:<SiSpringsecurity/>,
+      //   name: 'SpringSecurity',
+      // },
 
       {
         icon:<SiPostgresql/>,
         name: 'PostgreSql',
+      },
+      {
+        icon:<SiFirebase/>,
+        name: 'Firebase',
       },
       {
         icon:<FaHtml5/>,
@@ -133,22 +153,26 @@ import { SiExpress,SiPostgresql ,SiMongodb,SiTailwindcss, SiNextdotjs, SiSpringb
         name: 'javascript',
       },
       {
-        icon:<SiMongodb/>,
-        name: 'MongoDb',
+        icon:<SiTypescript/>,
+        name: 'Typescript',
       },
+      // {
+      //   icon:<SiMongodb/>,
+      //   name: 'MongoDb',
+      // },
      
-      {
-        icon:<SiExpress/>,
-        name: 'Express.js',
-      },
+      // {
+      //   icon:<SiExpress/>,
+      //   name: 'Express.js',
+      // },
       {
         icon:<FaReact/>,
         name: 'react.js',
       },
-      {
-        icon:<FaNodeJs/>,
-        name: 'Node.js',
-      },
+      // {
+      //   icon:<FaNodeJs/>,
+      //   name: 'Node.js',
+      // },
       {
         icon:<SiNextdotjs/>,
         name: 'next.js',
@@ -169,13 +193,21 @@ import { SiExpress,SiPostgresql ,SiMongodb,SiTailwindcss, SiNextdotjs, SiSpringb
         icon:<SiPostman/>,
         name: 'Postman',
       },
-      {
-        icon:<SiNetlify/>,
-        name: 'Netlify',
-      },
+      // {
+      //   icon:<SiNetlify/>,
+      //   name: 'Netlify',
+      // },
       {
         icon:<SiVercel/>,
         name: 'Vercel',
+      },
+      {
+        icon:<SiDocker/>,
+        name: 'Docker',
+      },
+      {
+        icon:<SiGooglecloud/>,
+        name: 'Google Cloud',
       },
     ],
 };

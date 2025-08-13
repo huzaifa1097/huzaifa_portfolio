@@ -5,13 +5,19 @@ import Link from "next/link";
 
 const services = [
     {
-        num:'01',
+        num: "01",
+        title: "Advanced AI Agent Development",
+        description: "Go beyond traditional applications with intelligent, autonomous AI agents. I architect and build full-stack AI systems that can reason, remember, and collaborate to solve complex problems—transforming your vision into a truly intelligent solution.",
+        href: "/projects"
+    },
+    {
+        num:'02',
         title:'Web Development',
         description:'Transform your ideas into powerful, full-stack web solutions. I craft secure, responsive websites that captivate users and drive results—bringing your digital vision to life from front to back.',
         href:"/projects"
     },
     {
-        num:'02',
+        num:'03',
         title:'UI/UX Design',
         description:'Elevate your digital experience with intuitive, user-centered design. I create visually stunning, functional interfaces that engage users and enhance usability—transforming your vision into a seamless, captivating journey from concept to completion.',
         href:"https://www.figma.com/proto/fQy10p4EsrHEoYykhlVjcr/UX%2FUI-Design?page-id=0%3A1&node-id=1-1080&node-type=CANVAS&viewport=631%2C-98%2C0.13&t=1T4CyNd71PJcnuHX-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A1080&show-proto-sidebar=1"

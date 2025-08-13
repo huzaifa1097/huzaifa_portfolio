@@ -19,7 +19,33 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 const aproject = [
   {
-    num:"01",
+  "num": "01",
+  "category": "AI & Full Stack",
+  "title": "OmniLeap – Full-Stack AI Agent",
+  "description": "Architected and deployed a complete, full-stack AI agent with long-term memory (RAG), autonomous code execution, and multi-agent collaboration capabilities. The system features a secure, scalable backend built with Python/FastAPI and a modern, aesthetic frontend developed with Next.js/React, fully deployed on a serverless cloud architecture.",
+  "stack": [
+    { name: "Python" },
+    { name: "TypeScript" },
+    { name: "Next.js" },
+    { name: "React.js" },
+    { name: "FastAPI" },
+    { name: "LangChain" },
+    { name: "CrewAI" },
+    { name: "RAG" },
+    { name: "Vector Databases" },
+    { name: "ChromaDB" },
+    { name: "Firebase" },
+    { name: "Google Cloud Run" },
+    { name: "Docker" },
+    { name: "Git" },
+    { name: "GitHub" }
+  ],
+  "image": "/assets2/work/chat-ui.png",
+  "live": "https://omni-leap-ai-agent.vercel.app",
+  "github": "https://github.com/huzaifa1097/omni-leap-ai-agent"
+},
+  {
+    num:"02",
     category :"backend",
     title :" Uber-Style Ride Booking Backend",
     description:
@@ -44,7 +70,7 @@ const aproject = [
   github: "https://github.com/huzaifa1097/uber-spring-boot",
  },
    {
-    num: "02",
+    num: "03",
     category: "Full Stack",
     title: "Stubnb",
     description:
@@ -63,8 +89,8 @@ const aproject = [
     github: "https://github.com/huzaifa1097/Stubnb",
   },
   {
-    num: "03",
-    category: "frontend",
+    num: "04",
+    category: "Frontend",
     title: "Spotify Clone",
     description:
       "This clone is an exciting and engaging project built using HTML and CSS that replicates the user interface and design of the popular music streaming platform, Spotify. With a keen focus on user experience and aesthetics, This Clone aims to provide a seamless and visually appealing music streaming experience for both music enthusiasts and web developers looking to hone their front-end development skills.",
