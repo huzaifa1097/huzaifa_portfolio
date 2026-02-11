@@ -11,7 +11,7 @@ const Home = () => {
       <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
       {/**text */}
       <div className="text-center xl:text-left order-2 xl:order-none">
-        <span className="text-center xl:text-left">Full-Stack Developer (Python & React) | Specializing in AI-Powered Applications & Agentic Systems</span>
+        <span className="text-center xl:text-left">Full-Stack Developer (Java, Python & React) | Specializing in AI-Powered Applications & Agentic Systems</span>
         <h1 className="h1 mb-6">
           Hello I'm <br /> <span className="text-accent">Abu Huzaifa Ahmad</span>
         </h1>
