@@ -1,0 +1,238 @@
+"use client";
+
+import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectFade } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+import TerminalWindow from "@/components/TerminalWindow";
+import SectionHeading from "@/components/SectionHeading";
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
+import Link from "next/link";
+import Image from "next/image";
+import WorkSliderBtns from "@/components/WorkSliderBtns";
+
+const aproject = [
+  {
+  "num": "01",
+  "category": "AI & Full Stack",
+  "title": "OmniLeap – Full-Stack AI Agent",
+  "description": "Architected and deployed a complete, full-stack AI agent with long-term memory (RAG), autonomous code execution, and multi-agent collaboration capabilities. The system features a secure, scalable backend built with Python/FastAPI and a modern, aesthetic frontend developed with Next.js/React, fully deployed on a serverless cloud architecture.",
+  "stack": [
+    { name: "Python" },
+    { name: "TypeScript" },
+    { name: "Next.js" },
+    { name: "React.js" },
+    { name: "FastAPI" },
+    { name: "LangChain" },
+    { name: "CrewAI" },
+    { name: "RAG" },
+    { name: "Vector Databases" },
+    { name: "ChromaDB" },
+    { name: "Firebase" },
+    { name: "Google Cloud Run" },
+    { name: "Docker" },
+    { name: "Git" },
+    { name: "GitHub" }
+  ],
+  "image": "/assets2/work/chat-ui.png",
+  "live": "https://omni-leap-ai-agent.vercel.app",
+  "github": "https://github.com/huzaifa1097/omni-leap-ai-agent"
+},
+  {
+    num:"02",
+    category :"backend",
+    title :" Uber-Style Ride Booking Backend",
+    description:
+    "Built a RESTful backend API using Java Spring Boot, simulating Uber’s ride-booking system with role-based access (Rider, Driver, Admin), JWT authentication, and PostgreSQL + PostGIS for spatial queries. Implemented booking, cancellation, driver assignment, and ride status update workflows. Deployed the project on AWS Elastic Beanstalk and tested all endpoints via Postman.",
+    stack:[
+  { name: "Java" },
+  { name: "Spring Boot" },
+  { name: "Spring Security" },
+  { name: "Spring Data JPA" },
+  { name: "PostgreSQL" },
+  { name: "PostGIS" },
+  { name: "JWT" },
+  { name: "Maven" },
+  { name: "Postman" },
+  { name: "Swagger UI" },
+  { name: "REST API" },
+  { name: "AWS Elastic Beanstalk" },
+  { name: "Git" },
+  { name: "GitHub" }],
+  image: "/assets2/work/uber.png",
+  live: "http://uber-spring-boot-env.eba-retfie2d.eu-north-1.elasticbeanstalk.com/swagger-ui/index.html",
+  github: "https://github.com/huzaifa1097/uber-spring-boot",
+ },
+   {
+    num: "03",
+    category: "Full Stack",
+    title: "Stubnb",
+    description:
+      "Stubnb is a full-stack web application designed specifically for students seeking affordable and convenient accommodations. Built using the MERN stack (MongoDB, Express, React, and Node.js), Stubnb provides a dedicated platform where students can easily search for, book, and manage rental accommodations near their educational institutions.Stubnb offers a user-friendly experience with secure user authentication, property listings, booking systems, and peer reviews. With a focus on student needs, Stubnb includes features such as budget-friendly filters, proximity search to campuses, and flexible lease options. The platform is fully responsive and optimized for both mobile and desktop, providing a seamless experience across devices.",
+    stack: [{ name: "Html 5" },
+       { name: "Css 3" },
+       {name:"JavaScript"},
+       {name:"MongoDb"},
+        {name:"Express.js"},
+         {name:"React.js"},
+         {name:"Node.js"},
+         {name:"Tailwind CSS"},
+          {name:"Vite"}],
+    image: "/assets2/work/stubnb.png",
+    live: "https://stubnb.netlify.app",
+    github: "https://github.com/huzaifa1097/Stubnb",
+  },
+  {
+    num: "04",
+    category: "Frontend",
+    title: "Spotify Clone",
+    description:
+      "This clone is an exciting and engaging project built using HTML and CSS that replicates the user interface and design of the popular music streaming platform, Spotify. With a keen focus on user experience and aesthetics, This Clone aims to provide a seamless and visually appealing music streaming experience for both music enthusiasts and web developers looking to hone their front-end development skills.",
+    stack: [{ name: "Html 5" }, { name: "Css 3" }],
+    image: "/assets2/work/Spotify.png",
+    live: "https://lowkeyhuzaifa.github.io/Spotify-Clone",
+    github: "https://github.com/huzaifa1097/Spotify-Clone",
+  },
+
+
+
+];
+
+const ProjectsSection = () => {
+  const [project, setProject] = useState(aproject[0]);
+
+  const handleSlideChange = (swiper) => {
+    const currentIndex = swiper.activeIndex;
+    setProject(aproject[currentIndex]);
+  };
+
+  return (
+    <section
+      id="projects"
+      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0 scroll-mt-28"
+    >
+      <div className="container mx-auto">
+        <SectionHeading
+          index="04"
+          label="PROJECTS"
+          title="Selected"
+          accent="Work"
+          description="A few things I've built end to end — from AI agents to production backends."
+        />
+        <div className="flex flex-col xl:flex-row xl:gap-[30px]">
+          <TerminalWindow
+            title={`${project.title.trim().toLowerCase().replace(/\s+/g, "-")}.project`}
+            className="w-full xl:w-[50%] xl-h-[480px] order-2 xl:order-none"
+            bodyClassName="flex flex-col justify-between h-full"
+          >
+            <div className="flex flex-col h-[50%] gap-4"> {/* Reduced gap value */}
+              {/* Outline */}
+              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
+                {project.num}
+              </div>
+              {/* Project category */}
+              <h2 className="text-[42px] font-bold leading-none gradient-text transition-all duration-500 capitalize mt-0 mb-0">
+                {project.category} project
+              </h2>
+              {/* Project description */}
+              <p className="text-white/60 mt-0 mb-0">
+                {project.description}
+              </p>
+            </div>
+            {/* Project details and links */}
+            <div className="mt-4"> {/* Adjusted margin-top for additional spacing */}
+              {/* Stack */}
+              <ul className="flex flex-wrap gap-2">
+                {project.stack.map((item, index) => (
+                  <li key={index} className="neon-chip">
+                    {item.name}
+                  </li>
+                ))}
+              </ul>
+              {/* Border */}
+              <div className="border border-white/10 mb-4 mt-4"></div>
+              {/* Buttons */}
+              <div className="flex items-center gap-4 mt-4">
+                {/* Live link */}
+                <Link href={project.live}>
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger className="w-[55px] h-[55px] rounded-full bg-white/5 flex justify-center items-center group hover:shadow-glow-cyan transition-all duration-300">
+                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                        <TooltipContent>
+                          <p>project</p>
+                        </TooltipContent>
+                      </TooltipTrigger>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+                {/* GitHub link */}
+                <Link href={project.github}>
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger className="w-[55px] h-[55px] rounded-full bg-white/5 flex justify-center items-center group hover:shadow-glow-purple transition-all duration-300">
+                        <BsGithub className="text-white text-3xl group-hover:text-accent" />
+                        <TooltipContent>
+                          <p>GitHub repository</p>
+                        </TooltipContent>
+                      </TooltipTrigger>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+              </div>
+            </div>
+          </TerminalWindow>
+          <div className="w-full xl:w-[50%]">
+            <Swiper
+              modules={[EffectFade]}
+              effect="fade"
+              fadeEffect={{ crossFade: true }}
+              spaceBetween={30}
+              slidesPerView={1}
+              className="xl:h-[520px] mb-12"
+              onSlideChange={handleSlideChange}
+            >
+              {aproject.map((project, index) => {
+                return (
+                  <SwiperSlide key={index} className="w-full">
+                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20 rounded-2xl overflow-hidden">
+                      {/*overlay */}
+                    <div className="absolute top-0 bottom-0 w-full h-full bg-gradient-to-t from-primary/70 via-transparent to-transparent z-10"></div>
+                    {/*image */}
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={project.image}
+                        fill="Project Image"
+                        className="object-cover"
+                        alt=""
+                      />
+                    </div>
+                    </div>
+
+                  </SwiperSlide>
+                );
+              })}
+              {/*slider buttons */}
+              <WorkSliderBtns containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%-30px)] md:bottom-[calc(50%-10px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
+
+                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+              />
+            </Swiper>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProjectsSection;

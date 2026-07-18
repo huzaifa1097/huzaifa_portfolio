@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
 @layer base {
     body {
         @apply font-primary bg-primary text-white leading-loose;
@@ -16,10 +21,56 @@
         @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
     }
 .text-outline{
-    -webkit-text-stroke: 1px #ffffff;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.4);
 }
 .text-outline-hover{
-    -webkit-text-stroke: 1px #00ff99;
+    -webkit-text-stroke: 1px #00f0ff;
 }
 }
-  
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a12;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00f0ff, #a855f7);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #33f5ff, #c084fc);
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #00f0ff #0a0a12;
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface/60 backdrop-blur-xl border border-white/10 rounded-2xl shadow-glass;
+  }
+  .glass-card-hover {
+    @apply hover:border-accent/50 hover:shadow-glow-cyan transition-all duration-300;
+  }
+  .gradient-text {
+    @apply bg-neon-gradient bg-clip-text text-transparent bg-[length:200%_200%] animate-gradient-x;
+  }
+  .glow-border {
+    @apply border border-accent/30 shadow-glow-cyan;
+  }
+  .neon-chip {
+    @apply px-4 py-2 rounded-full border border-accent/30 bg-white/5 backdrop-blur-sm text-sm text-accent/90 hover:bg-accent/10 hover:shadow-glow-cyan transition-all duration-300;
+  }
+}
