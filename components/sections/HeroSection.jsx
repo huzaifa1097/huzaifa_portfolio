@@ -49,7 +49,7 @@ const HeroSection = () => {
             </motion.div>
             {/*button and socials */}
             <motion.div variants={fadeUp} className="flex flex-col xl:flex-row items-center gap-8">
-              <a href="/assets2/resume/resume_portfolio.pdf" download>
+              <a href="/assets2/resume/resume_portfolio.pdf" download target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="outline"
                   className="glow-border uppercase flex items-center gap-2 px-3 py-1 text-sm">
