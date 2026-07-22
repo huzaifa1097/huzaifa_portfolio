@@ -1,7 +1,7 @@
 "use client";
 
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Sparkles } from "@react-three/drei";
+import { Float, Sparkles, Trail } from "@react-three/drei";
 import { useRef, useEffect } from "react";
 import { useScroll } from "framer-motion";
 
@@ -43,8 +43,10 @@ function RevolvingShape({ scrollRef }) {
 
   return (
     <group ref={groupRef}>
+      <Float speed={1.7} rotationIntensity={0.18} floatIntensity={0.55}>
+      <Trail width={0.7} length={5} color="#00f0ff" attenuation={(t) => t * t}>
       <mesh ref={coreRef}>
-        <icosahedronGeometry args={[1.5, 1]} />
+        <icosahedronGeometry args={[1.45, 2]} />
         <meshStandardMaterial
           color="#00f0ff"
           emissive="#00f0ff"
@@ -55,6 +57,7 @@ function RevolvingShape({ scrollRef }) {
           opacity={0.88}
         />
       </mesh>
+      </Trail>
       <mesh ref={wireRef} scale={1.18}>
         <icosahedronGeometry args={[1.5, 1]} />
         <meshBasicMaterial color="#a855f7" wireframe transparent opacity={0.35} />
@@ -63,7 +66,16 @@ function RevolvingShape({ scrollRef }) {
         <torusGeometry args={[2.3, 0.015, 16, 100]} />
         <meshBasicMaterial color="#ff2ea6" transparent opacity={0.5} />
       </mesh>
+      <mesh rotation={[1.1, 0.25, -0.25]}>
+        <torusGeometry args={[2.75, 0.008, 12, 120]} />
+        <meshBasicMaterial color="#00f0ff" transparent opacity={0.35} />
+      </mesh>
+      <mesh rotation={[0.15, -0.7, 0.6]}>
+        <torusGeometry args={[3.12, 0.006, 12, 120]} />
+        <meshBasicMaterial color="#a855f7" transparent opacity={0.25} />
+      </mesh>
       <Sparkles count={70} scale={5.5} size={2} speed={0.4} color="#00f0ff" />
+      </Float>
     </group>
   );
 }
@@ -86,9 +98,10 @@ const Scene3D = ({ className = "" }) => {
         dpr={[1, 1.5]}
         gl={{ alpha: true, antialias: true }}
       >
-        <ambientLight intensity={0.4} />
+        <ambientLight intensity={0.35} />
         <pointLight position={[5, 5, 5]} intensity={1.2} color="#00f0ff" />
         <pointLight position={[-5, -3, -5]} intensity={0.8} color="#a855f7" />
+        <pointLight position={[0, 0, 4]} intensity={0.55} color="#ffffff" />
         <RevolvingShape scrollRef={scrollRef} />
       </Canvas>
     </div>

@@ -1,4 +1,3 @@
-import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 //components
 import Header from "@/components/Header";
@@ -8,12 +7,7 @@ import GradientBlob from "@/components/GradientBlob";
 import CursorGlow from "@/components/CursorGlow";
 import ScrollProgress from "@/components/ScrollProgress";
 import BackToTop from "@/components/BackToTop";
-
-const jetbrainsMono = JetBrains_Mono({ 
-  subsets: ["latin"],
-  weight: ["100","200","300","400","500","600","700","800"],
-  variable: '--font-jetbrainsMono',
- });
+import DepthField from "@/components/DepthField";
 
 export const metadata = {
   title: "Huzaifa_Portfolio",
@@ -23,16 +17,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={jetbrainsMono.variable}>
+      <body>
       <GradientBlob />
+      <DepthField />
       <CursorGlow />
-      <ScrollProgress />
-      <Header />
-      <StairTransition/>
-      <PageTransition>
-      {children}
-      </PageTransition>
-      <BackToTop />
+      <div className="site-shell">
+        <ScrollProgress />
+        <Header />
+        <StairTransition/>
+        <PageTransition>
+        {children}
+        </PageTransition>
+        <BackToTop />
+      </div>
       </body>
     </html>
   );
